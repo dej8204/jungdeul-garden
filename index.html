@@ -1,0 +1,723 @@
+{\rtf1\ansi\ansicpg949\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+<!doctype html>\
+<html lang="ko">\
+<head>\
+<meta charset="utf-8">\
+<meta name="viewport" content="width=device-width, initial-scale=1">\
+<meta name="theme-color" content="#5b2c20">\
+<title>\uc0\u51221 \u46308 \u44032 \u46304  | \u48288 \u45768 \u54616 \u47336 \u52852  \u44992 \u44256 \u44396 \u47560  \u51452 \u47928 </title>\
+\
+<style>\
+:root \{\
+  --brown: #5b2c20;\
+  --brown2: #7b3e29;\
+  --cream: #fff8ed;\
+  --orange: #e69a39;\
+  --ink: #34251e;\
+  --muted: #806e60;\
+  --line: #ead8c5;\
+\}\
+* \{ box-sizing: border-box; \}\
+body \{\
+  margin: 0;\
+  background: #f7efe3;\
+  color: var(--ink);\
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,\
+    "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;\
+  line-height: 1.6;\
+\}\
+.page \{\
+  max-width: 760px;\
+  margin: auto;\
+  padding: 16px 13px 42px;\
+\}\
+.hero \{\
+  overflow: hidden;\
+  border-radius: 25px;\
+  color: var(--cream);\
+  background: linear-gradient(145deg, #54281d, #92502d);\
+\}\
+.hero-art \{\
+  min-height: 190px;\
+  display: flex;\
+  justify-content: center;\
+  align-items: center;\
+  background:\
+    radial-gradient(ellipse at 50% 100%, #d68a39 0 12%, transparent 13%),\
+    radial-gradient(ellipse at 35% 75%, #b9682d 0 16%, transparent 17%),\
+    radial-gradient(ellipse at 65% 72%, #c57b35 0 17%, transparent 18%),\
+    linear-gradient(135deg, #38281d, #79502e);\
+\}\
+.hero-art span \{\
+  font-size: 65px;\
+  filter: drop-shadow(0 8px 8px #24130c55);\
+\}\
+.hero-copy \{ padding: 23px 22px 26px; \}\
+.eyebrow \{\
+  font-size: 11px;\
+  letter-spacing: .22em;\
+  font-weight: 800;\
+  color: #f4c77f;\
+  margin: 0 0 8px;\
+\}\
+h1 \{\
+  font-size: clamp(28px, 6vw, 42px);\
+  line-height: 1.17;\
+  letter-spacing: -.05em;\
+  margin: 0;\
+\}\
+.hero-copy p \{\
+  font-size: 14px;\
+  color: #fff0dc;\
+  margin: 13px 0 0;\
+\}\
+.pill \{\
+  display: inline-block;\
+  margin-top: 15px;\
+  padding: 6px 11px;\
+  border-radius: 30px;\
+  background: #f6d9a7;\
+  color: #60321f;\
+  font-size: 12px;\
+  font-weight: 800;\
+\}\
+.intro \{\
+  margin: 14px 0;\
+  padding: 15px 16px;\
+  background: #fff1d9;\
+  border: 1px solid #f0d6a9;\
+  border-radius: 15px;\
+  font-size: 13px;\
+  color: #68432d;\
+\}\
+.section \{\
+  margin-top: 14px;\
+  padding: 21px 18px;\
+  background: #fffdf8;\
+  border: 1px solid var(--line);\
+  border-radius: 20px;\
+  box-shadow: 0 5px 20px #7c48200a;\
+\}\
+h2 \{\
+  font-size: 18px;\
+  margin: 0 0 4px;\
+  letter-spacing: -.03em;\
+\}\
+.sub \{\
+  font-size: 13px;\
+  color: var(--muted);\
+  margin: 0 0 15px;\
+\}\
+.products \{ display: grid; gap: 11px; \}\
+.product \{\
+  display: grid;\
+  grid-template-columns: minmax(0, 1fr) auto;\
+  gap: 10px;\
+  align-items: center;\
+  padding: 15px;\
+  border: 1px solid var(--line);\
+  border-radius: 15px;\
+  background: #fff;\
+\}\
+.product.selected \{\
+  border: 2px solid var(--orange);\
+  padding: 14px;\
+  background: #fff9ef;\
+\}\
+.product-name \{ font-weight: 850; font-size: 16px; \}\
+.product-desc \{ font-size: 12px; color: var(--muted); \}\
+.price \{\
+  font-size: 18px;\
+  color: var(--brown2);\
+  font-weight: 900;\
+  margin-top: 3px;\
+\}\
+.tag \{\
+  display: inline-block;\
+  background: #f9e4bb;\
+  color: #7b421c;\
+  font-size: 11px;\
+  font-weight: 900;\
+  padding: 3px 8px;\
+  border-radius: 20px;\
+  margin-bottom: 5px;\
+\}\
+.qty-input \{\
+  width: 76px;\
+  min-height: 44px;\
+  padding: 8px 6px;\
+  text-align: center;\
+  font-size: 17px;\
+  font-weight: 800;\
+  border: 1px solid var(--line);\
+  border-radius: 10px;\
+  background: #fffdf8;\
+\}\
+.grid \{\
+  display: grid;\
+  grid-template-columns: 1fr 1fr;\
+  gap: 12px;\
+\}\
+.field \{\
+  display: flex;\
+  flex-direction: column;\
+  gap: 5px;\
+  margin-bottom: 12px;\
+\}\
+.full \{ grid-column: 1 / -1; \}\
+label \{ font-size: 13px; font-weight: 750; \}\
+.req \{ color: #bd3e24; \}\
+input:not([type="checkbox"]) \{\
+  width: 100%;\
+  padding: 12px;\
+  border: 1px solid #e2d1bf;\
+  border-radius: 11px;\
+  background: #fff;\
+  font: inherit;\
+  font-size: 14px;\
+  color: var(--ink);\
+\}\
+input:focus \{\
+  outline: 3px solid #f5d8a4;\
+  border-color: #d28b3d;\
+\}\
+.summary \{\
+  padding: 14px 15px;\
+  background: #f9f1e4;\
+  border-radius: 15px;\
+\}\
+.sumrow \{\
+  display: flex;\
+  justify-content: space-between;\
+  gap: 10px;\
+  padding: 6px 0;\
+  font-size: 14px;\
+\}\
+.sumrow span:first-child \{ color: #796657; \}\
+.sumrow strong \{\
+  text-align: right;\
+  font-variant-numeric: tabular-nums;\
+\}\
+.total \{\
+  border-top: 1px solid #dfc8ad;\
+  margin-top: 6px;\
+  padding-top: 12px;\
+  font-weight: 900;\
+  font-size: 16px;\
+\}\
+.total strong \{ font-size: 23px; color: var(--brown); \}\
+.paybox \{\
+  padding: 16px;\
+  border: 1px solid #efd9b6;\
+  border-radius: 16px;\
+  background: #fff8ec;\
+\}\
+.paylink \{\
+  display: block;\
+  text-align: center;\
+  padding: 13px;\
+  margin-top: 12px;\
+  border-radius: 11px;\
+  background: var(--brown);\
+  color: white;\
+  font-weight: 800;\
+  text-decoration: none;\
+\}\
+.check \{\
+  display: flex;\
+  gap: 9px;\
+  align-items: flex-start;\
+  font-size: 12px;\
+  color: #5c5148;\
+  margin: 11px 0;\
+\}\
+.check input \{\
+  width: 17px;\
+  height: 17px;\
+  flex: 0 0 auto;\
+  margin-top: 2px;\
+  accent-color: var(--brown);\
+\}\
+.actions \{\
+  display: grid;\
+  grid-template-columns: 1fr 1fr;\
+  gap: 10px;\
+  margin-top: 15px;\
+\}\
+.btn \{\
+  border: 0;\
+  border-radius: 12px;\
+  padding: 14px 10px;\
+  font: inherit;\
+  font-weight: 850;\
+  cursor: pointer;\
+\}\
+.primary \{ background: var(--brown); color: white; \}\
+.secondary \{\
+  background: #f2e5d3;\
+  color: var(--brown);\
+  border: 1px solid #e1cbb0;\
+\}\
+.status \{\
+  display: none;\
+  white-space: pre-wrap;\
+  overflow-wrap: anywhere;\
+  background: #f0f3e9;\
+  color: #405339;\
+  border-radius: 11px;\
+  padding: 12px;\
+  margin-top: 12px;\
+  font-size: 13px;\
+\}\
+.status.show \{ display: block; \}\
+.fine \{ font-size: 11px; color: var(--muted); margin-top: 11px; \}\
+.footer \{\
+  text-align: center;\
+  padding: 24px 8px 0;\
+  color: var(--muted);\
+  font-size: 12px;\
+\}\
+.footer strong \{ color: var(--brown); \}\
+\
+@media (max-width: 520px) \{\
+  .hero-art \{ min-height: 155px; \}\
+  .hero-copy \{ padding: 21px 18px; \}\
+  .section \{ padding: 18px 14px; \}\
+  .grid \{ grid-template-columns: 1fr; gap: 0; \}\
+  .full \{ grid-column: auto; \}\
+  .actions \{ grid-template-columns: 1fr; \}\
+\}\
+</style>\
+</head>\
+\
+<body>\
+<main class="page">\
+\
+<header class="hero">\
+  <div class="hero-art" aria-label="\uc0\u44256 \u44396 \u47560  \u51068 \u47084 \u49828 \u53944 ">\
+    <span aria-hidden="true">\uc0\u55356 \u57184 </span>\
+  </div>\
+  <div class="hero-copy">\
+    <p class="eyebrow">J E O N G D E U L&nbsp; G A R D E N</p>\
+    <h1>\uc0\u51221 \u46308 \u44032 \u46304 <br>\u48288 \u45768 \u54616 \u47336 \u52852  \u44992 \u44256 \u44396 \u47560 </h1>\
+    <p>\uc0\u48173 \u50640 \u49436  \u51221 \u49457 \u44751  \u53412 \u50864 \u44256  \u49688 \u54869 \u54620  \u44256 \u44396 \u47560 \u47484  \u48372 \u45236 \u46300 \u47140 \u50836 .<br>\
+    \uc0\u49688 \u54869 \u51032  \u44592 \u49256 \u44284  \u51088 \u50672 \u51032  \u47579 \u51012  \u51080 \u45716  \u44536 \u45824 \u47196  \u45208 \u45589 \u45768 \u45796 .</p>\
+    <span class="pill">\uc0\u44053 \u50896 \u46020  \u51116 \u48176  \'b7 \u48708 \u49464 \u52377  \'b7 \u49328 \u51648  \u51649 \u49569 </span>\
+  </div>\
+</header>\
+\
+<div class="intro">\
+  <strong>\uc0\u51452 \u47928  \u51204  \u44845  \u54869 \u51064 \u54644  \u51452 \u49464 \u50836 .</strong><br>\
+  \uc0\u45453 \u50557 \u51012  \u49324 \u50857 \u54616 \u51648  \u50506 \u44256  \u51116 \u48176 \u54664 \u51648 \u47564  \u47924 \u45453 \u50557  \u51064 \u51613 \u51012  \u48155 \u51008  \u49345 \u54408 \u51008  \u50500 \u45785 \u45768 \u45796 .\
+  \uc0\u53356 \u44592 \u50752  \u47784 \u50577 \u51012  \u48324 \u46020 \u47196  \u49440 \u48324 \u54616 \u51648  \u50506 \u51004 \u47728 , \u55129 \u51060  \u47931 \u51008  \u48708 \u49464 \u52377  \u49345 \u53468 \u47196  \u48156 \u49569 \u46121 \u45768 \u45796 .\
+</div>\
+\
+<form id="orderForm">\
+\
+<section class="section">\
+  <h2>01. \uc0\u44256 \u44396 \u47560  \u49440 \u53469 </h2>\
+  <p class="sub">\uc0\u50896 \u54616 \u45716  \u51473 \u47049 \u51032  \u49688 \u47049 \u51012  \u51077 \u47141 \u54644  \u51452 \u49464 \u50836 . \u44552 \u50529 \u51060  \u51088 \u46041 \u51004 \u47196  \u44228 \u49328 \u46121 \u45768 \u45796 .</p>\
+\
+  <div class="products">\
+    <div class="product" data-size="3">\
+      <div>\
+        <div class="product-name">\uc0\u48288 \u45768 \u54616 \u47336 \u52852  3kg</div>\
+        <div class="product-desc">\uc0\u44032 \u48333 \u44172  \u47579 \u48372 \u45716  \u44396 \u49457 </div>\
+        <div class="price">11,900\uc0\u50896 </div>\
+      </div>\
+      <input class="qty-input" id="qty3" type="number"\
+        min="0" max="99" step="1" value="0"\
+        inputmode="numeric" aria-label="3kg \uc0\u49688 \u47049 ">\
+    </div>\
+\
+    <div class="product" data-size="5">\
+      <div>\
+        <span class="tag">\uc0\u52628 \u52380  \u44396 \u49457 </span>\
+        <div class="product-name">\uc0\u48288 \u45768 \u54616 \u47336 \u52852  5kg</div>\
+        <div class="product-desc">\uc0\u44032 \u51109  \u47924 \u45212 \u54616 \u44172  \u51600 \u44592 \u45716  \u44396 \u49457 </div>\
+        <div class="price">20,900\uc0\u50896 </div>\
+      </div>\
+      <input class="qty-input" id="qty5" type="number"\
+        min="0" max="99" step="1" value="0"\
+        inputmode="numeric" aria-label="5kg \uc0\u49688 \u47049 ">\
+    </div>\
+\
+    <div class="product" data-size="10">\
+      <div>\
+        <div class="product-name">\uc0\u48288 \u45768 \u54616 \u47336 \u52852  10kg</div>\
+        <div class="product-desc">\uc0\u45321 \u45321 \u54616 \u44172  \u46160 \u44256  \u47673 \u45716  \u44396 \u49457 </div>\
+        <div class="price">34,900\uc0\u50896 </div>\
+      </div>\
+      <input class="qty-input" id="qty10" type="number"\
+        min="0" max="99" step="1" value="0"\
+        inputmode="numeric" aria-label="10kg \uc0\u49688 \u47049 ">\
+    </div>\
+  </div>\
+</section>\
+\
+<section class="section">\
+  <h2>02. \uc0\u48155 \u51004 \u49884 \u45716  \u48516  \u51221 \u48372 </h2>\
+  <p class="sub">\uc0\u53469 \u48176  \u48156 \u49569 \u51012  \u50948 \u54644  \u51221 \u54869 \u54616 \u44172  \u51077 \u47141 \u54644  \u51452 \u49464 \u50836 .</p>\
+\
+  <div class="grid">\
+    <div class="field">\
+      <label for="buyer">\uc0\u51452 \u47928 \u51088  \u51060 \u47492  <span class="req">*</span></label>\
+      <input id="buyer" name="buyer" autocomplete="name"\
+        required placeholder="\uc0\u51060 \u47492  \u51077 \u47141 ">\
+    </div>\
+\
+    <div class="field">\
+      <label for="phone">\uc0\u50672 \u46973 \u52376  <span class="req">*</span></label>\
+      <input id="phone" name="phone" type="tel"\
+        autocomplete="tel" inputmode="tel"\
+        required placeholder="010-0000-0000">\
+    </div>\
+\
+    <div class="field full">\
+      <label for="address">\uc0\u48176 \u49569  \u51452 \u49548  <span class="req">*</span></label>\
+      <input id="address" name="address"\
+        autocomplete="street-address" required\
+        placeholder="\uc0\u46020 \u47196 \u47749  \u51452 \u49548  \u48143  \u49345 \u49464  \u51452 \u49548 ">\
+    </div>\
+\
+    <div class="field full">\
+      <label for="memo">\uc0\u48176 \u49569  \u50836 \u52397 \u49324 \u54637 </label>\
+      <input id="memo" name="memo"\
+        placeholder="\uc0\u50696 : \u47928  \u50526 \u50640  \u45459 \u50500 \u51452 \u49464 \u50836  (\u49440 \u53469 )">\
+    </div>\
+\
+    <div class="field full">\
+      <label for="instagram">\uc0\u51064 \u49828 \u53440 \u44536 \u47016  ID (\u49440 \u53469 )</label>\
+      <input id="instagram" name="instagram" placeholder="@\uc0\u50500 \u51060 \u46356 ">\
+    </div>\
+  </div>\
+</section>\
+\
+<section class="section">\
+  <h2>03. \uc0\u51452 \u47928  \u44552 \u50529  \u54869 \u51064 </h2>\
+  <p class="sub">\uc0\u53469 \u48176 \u48708 \u45716  \u48149 \u49828 \u45817  3,000\u50896 \u51077 \u45768 \u45796 .</p>\
+\
+  <div class="summary" aria-live="polite">\
+    <div class="sumrow"><span>3kg \uc0\u49345 \u54408 </span><strong id="line3">0\u50896 </strong></div>\
+    <div class="sumrow"><span>5kg \uc0\u49345 \u54408 </span><strong id="line5">0\u50896 </strong></div>\
+    <div class="sumrow"><span>10kg \uc0\u49345 \u54408 </span><strong id="line10">0\u50896 </strong></div>\
+    <div class="sumrow"><span>\uc0\u49345 \u54408  \u54633 \u44228 </span><strong id="subtotal">0\u50896 </strong></div>\
+    <div class="sumrow">\
+      <span>\uc0\u53469 \u48176 \u48708  (<span id="boxCount">0</span>\u48149 \u49828  \'d7 3,000\u50896 )</span>\
+      <strong id="shipping">0\uc0\u50896 </strong>\
+    </div>\
+    <div class="sumrow total">\
+      <span>\uc0\u52509  \u51077 \u44552  \u50696 \u51221  \u44552 \u50529 </span><strong id="total">0\u50896 </strong>\
+    </div>\
+  </div>\
+\
+  <p class="fine">\
+    \uc0\u8251  \u51452 \u47928  \u44552 \u50529 \u51008  \u49440 \u53469 \u54620  \u49688 \u47049 \u50640  \u46384 \u46972  \u51088 \u46041  \u44228 \u49328 \u46121 \u45768 \u45796 .\
+    \uc0\u46020 \u49436 \u49328 \u44036  \u52628 \u44032  \u50868 \u51076 \u51060  \u48156 \u49373 \u54624  \u44221 \u50864  \u54032 \u47588 \u51088 \u44032  \u48324 \u46020 \u47196  \u50504 \u45236 \u54633 \u45768 \u45796 .\
+  </p>\
+</section>\
+\
+<section class="section">\
+  <h2>04. \uc0\u51077 \u44552  \u50504 \u45236 </h2>\
+  <p class="sub">\uc0\u51452 \u47928  \u51228 \u52636  \u54980  \u51077 \u44552 \u54644  \u51452 \u49464 \u50836 .</p>\
+\
+  <div class="paybox">\
+    <strong>\uc0\u51221 \u46308 \u44032 \u46304  \u51077 \u44552  \u54168 \u51060 \u51648 </strong>\
+    <p class="fine">\
+      \uc0\u50500 \u47000  \u48260 \u53948 \u51012  \u45572 \u47476 \u47732  \u51077 \u44552  \u54168 \u51060 \u51648 \u47196  \u51060 \u46041 \u54633 \u45768 \u45796 .\
+      \uc0\u51452 \u47928  \u44552 \u50529 \u51012  \u54869 \u51064 \u54620  \u46244  \u51077 \u44552 \u54644  \u51452 \u49464 \u50836 .\
+      \uc0\u54032 \u47588 \u51088 \u44032  \u51077 \u44552 \u51012  \u54869 \u51064 \u54620  \u54980  \u48176 \u49569 \u51012  \u51652 \u54665 \u54633 \u45768 \u45796 .\
+    </p>\
+    <a class="paylink"\
+      href="https://free4qr.com/qr-result#s=%EC%A0%95%EB%93%A4%EA%B0%80%EB%93%A0&b=011&a=3020181806111&h=%EC%A0%95%EB%8B%A4%EC%9D%80"\
+      target="_blank" rel="noopener noreferrer">\
+      \uc0\u51077 \u44552  \u54168 \u51060 \u51648  \u50676 \u44592 \
+    </a>\
+  </div>\
+\
+  <p class="fine">\
+    \uc0\u8251  \u51060  \u54168 \u51060 \u51648 \u50640 \u49436  \u44208 \u51228 \u44032  \u51088 \u46041  \u52376 \u47532 \u46104 \u51648 \u45716  \u50506 \u49845 \u45768 \u45796 .\
+    \uc0\u51452 \u47928  \u51221 \u48372  \u51228 \u52636 \u44284  \u51077 \u44552  \u54869 \u51064  \u54980  \u48176 \u49569 \u51060  \u51652 \u54665 \u46121 \u45768 \u45796 .\
+  </p>\
+</section>\
+\
+<section class="section">\
+  <h2>05. \uc0\u51452 \u47928  \u54869 \u51064  \u48143  \u51228 \u52636 </h2>\
+\
+  <label class="check">\
+    <input type="checkbox" id="agreeProduct" required>\
+    <span>\uc0\u45453 \u50557  \u48120 \u49324 \u50857  \u51116 \u48176  \u49345 \u54408 \u51060 \u47728 , \u47924 \u45453 \u50557  \u51064 \u51613  \u49345 \u54408 \u51008  \u50500 \u45785 \u45768 \u45796 .\
+    \uc0\u48708 \u49464 \u52377 \'b7\u53356 \u44592  \u48143  \u47784 \u50577  \u48120 \u49440 \u48324  \u49345 \u54408 \u51076 \u51012  \u54869 \u51064 \u54664 \u49845 \u45768 \u45796 .\
+    <span class="req">*</span></span>\
+  </label>\
+\
+  <label class="check">\
+    <input type="checkbox" id="agreePrivacy" required>\
+    <span>\uc0\u51452 \u47928  \u48143  \u48176 \u49569  \u52376 \u47532 \u47484  \u50948 \u54620  \u44060 \u51064 \u51221 \u48372  \u49688 \u51665 \'b7\u51060 \u50857 \u50640  \u46041 \u51032 \u54633 \u45768 \u45796 .\
+    \uc0\u51077 \u47141 \u54620  \u51221 \u48372 \u45716  \u51452 \u47928  \u52376 \u47532  \u47785 \u51201 \u51004 \u47196  \u49324 \u50857 \u46121 \u45768 \u45796 .\
+    <span class="req">*</span></span>\
+  </label>\
+\
+  <div class="actions">\
+    <button type="submit" class="btn primary">\uc0\u51452 \u47928  \u51228 \u52636 \u54616 \u44592 </button>\
+    <button type="button" id="copyBtn" class="btn secondary">\uc0\u51452 \u47928  \u45236 \u50857  \u48373 \u49324 </button>\
+  </div>\
+\
+  <div id="status" class="status" role="status" aria-live="polite"></div>\
+\
+  <p class="fine">\
+    \uc0\u51452 \u47928  \u51088 \u46041  \u51200 \u51109 \u51012  \u50948 \u54644  Google Apps Script \u50937  \u50545  URL\u51012  \u49444 \u51221 \u54644 \u50556  \u54633 \u45768 \u45796 .\
+    URL\uc0\u51012  \u49444 \u51221 \u54616 \u44592  \u51204 \u50640 \u45716  \u51452 \u47928  \u45236 \u50857  \u48373 \u49324  \u44592 \u45733 \u51012  \u51060 \u50857 \u54644  \u51452 \u49464 \u50836 .\
+  </p>\
+</section>\
+</form>\
+\
+<footer class="footer">\
+  <strong>\uc0\u51221 \u46308 \u44032 \u46304 </strong><br>\
+  \uc0\u48173 \u50640 \u49436  \u49885 \u53441 \u44620 \u51648 , \u44228 \u51208 \u51032  \u47579 \u51012  \u51221 \u49457 \u44751  \u51204 \u54633 \u45768 \u45796 .\
+</footer>\
+</main>\
+\
+<script>\
+(function () \{\
+  'use strict';\
+\
+  const PRICE = \{ 3: 11900, 5: 20900, 10: 34900 \};\
+  const SHIPPING_PER_BOX = 3000;\
+\
+  // Google Apps Script \uc0\u50937  \u50545 \u51012  \u48176 \u54252 \u54620  \u46244  \u50500 \u47000  \u51452 \u49548 \u47484  \u44368 \u52404 \u54616 \u49464 \u50836 .\
+  const endpoint = 'https://script.google.com/macros/s/AKfycbwL04GINu_zAr26RdEnJs6YDQSTD9-uuLe4ZoWML8LNcnwe4LOBK8n5tqXuns7MMLbJJA/exec';\
+\
+  const $ = (id) => document.getElementById(id);\
+  const won = (n) =>\
+    (Math.round(Number(n) || 0)).toLocaleString('ko-KR') + '\uc0\u50896 ';\
+\
+  function getQty(size) \{\
+    const field = $('qty' + size);\
+    const value = Number.parseInt(field.value, 10);\
+\
+    if (!Number.isFinite(value) || value < 0) return 0;\
+    return Math.min(99, value);\
+  \}\
+\
+  function calculateTotal() \{\
+    let subtotal = 0;\
+    let boxes = 0;\
+\
+    [3, 5, 10].forEach((size) => \{\
+      const qty = getQty(size);\
+      const line = qty * PRICE[size];\
+\
+      subtotal += line;\
+      boxes += qty;\
+\
+      $('line' + size).textContent = won(line);\
+\
+      const card = document.querySelector(\
+        '.product[data-size="' + size + '"]'\
+      );\
+      if (card) card.classList.toggle('selected', qty > 0);\
+    \});\
+\
+    const shipping = boxes * SHIPPING_PER_BOX;\
+    const total = subtotal + shipping;\
+\
+    $('subtotal').textContent = won(subtotal);\
+    $('boxCount').textContent = String(boxes);\
+    $('shipping').textContent = won(shipping);\
+    $('total').textContent = won(total);\
+\
+    return \{ subtotal, boxes, shipping, total \};\
+  \}\
+\
+  function makeOrder() \{\
+    const totals = calculateTotal();\
+    const quantities = \{\
+      '3': getQty(3),\
+      '5': getQty(5),\
+      '10': getQty(10)\
+    \};\
+\
+    const items = [];\
+\
+    [3, 5, 10].forEach((size) => \{\
+      const qty = quantities[String(size)];\
+      if (qty > 0) \{\
+        items.push(\
+          '\uc0\u48288 \u45768 \u54616 \u47336 \u52852  ' + size + 'kg \'d7 ' + qty +\
+          '\uc0\u48149 \u49828 : ' + won(PRICE[size] * qty)\
+        );\
+      \}\
+    \});\
+\
+    return \{\
+      orderId: 'JG-' + Date.now(),\
+      createdAt: new Date().toISOString(),\
+      buyer: $('buyer').value.trim(),\
+      phone: $('phone').value.trim(),\
+      address: $('address').value.trim(),\
+      memo: $('memo').value.trim(),\
+      instagram: $('instagram').value.trim(),\
+      items: items.join(' / '),\
+      quantities: JSON.stringify(quantities),\
+      subtotal: totals.subtotal,\
+      boxCount: totals.boxes,\
+      shipping: totals.shipping,\
+      total: totals.total,\
+      productConsent: $('agreeProduct').checked,\
+      privacyConsent: $('agreePrivacy').checked\
+    \};\
+  \}\
+\
+  function orderText(order) \{\
+    const lines = [\
+      '[\uc0\u51221 \u46308 \u44032 \u46304  \u48288 \u45768 \u54616 \u47336 \u52852  \u44992 \u44256 \u44396 \u47560  \u51452 \u47928 ]',\
+      '',\
+      order.items,\
+      '\uc0\u49345 \u54408  \u54633 \u44228 : ' + won(order.subtotal),\
+      '\uc0\u48176 \u49569 \u48708 : ' + won(order.shipping) +\
+        ' (' + order.boxCount + '\uc0\u48149 \u49828  \'d7 3,000\u50896 )',\
+      '\uc0\u52509  \u51077 \u44552  \u50696 \u51221  \u44552 \u50529 : ' + won(order.total),\
+      '',\
+      '\uc0\u51452 \u47928 \u51088 : ' + order.buyer,\
+      '\uc0\u50672 \u46973 \u52376 : ' + order.phone,\
+      '\uc0\u48176 \u49569  \u51452 \u49548 : ' + order.address,\
+      '\uc0\u48176 \u49569  \u50836 \u52397 \u49324 \u54637 : ' + (order.memo || '\u50630 \u51020 '),\
+      '\uc0\u51064 \u49828 \u53440 \u44536 \u47016 : ' + (order.instagram || '\u48120 \u51077 \u47141 ')\
+    ];\
+\
+    return lines.join('\\n');\
+  \}\
+\
+  function show(message, error) \{\
+    const status = $('status');\
+    status.textContent = message;\
+    status.style.background = error ? '#f8e8e2' : '#eef3e8';\
+    status.style.color = error ? '#8d2e21' : '#405339';\
+    status.classList.add('show');\
+  \}\
+\
+  function validate() \{\
+    const totals = calculateTotal();\
+\
+    if (totals.boxes < 1) \{\
+      show('\uc0\u44256 \u44396 \u47560  \u49688 \u47049 \u51012  1\u44060  \u51060 \u49345  \u51077 \u47141 \u54644  \u51452 \u49464 \u50836 .', true);\
+      return false;\
+    \}\
+\
+    return $('orderForm').reportValidity();\
+  \}\
+\
+  async function copyText(text) \{\
+    try \{\
+      await navigator.clipboard.writeText(text);\
+      show('\uc0\u51452 \u47928  \u45236 \u50857 \u51060  \u48373 \u49324 \u46104 \u50632 \u49845 \u45768 \u45796 . \u48537 \u50668 \u45347 \u50612  \u51204 \u45804 \u54644  \u51452 \u49464 \u50836 .', false);\
+    \} catch (error) \{\
+      const area = document.createElement('textarea');\
+      area.value = text;\
+      area.style.position = 'fixed';\
+      area.style.opacity = '1';\
+      area.style.width = '100%';\
+      area.style.height = '180px';\
+      area.style.left = '0';\
+      area.style.bottom = '0';\
+      area.setAttribute('aria-label', '\uc0\u48373 \u49324 \u54624  \u51452 \u47928  \u45236 \u50857 ');\
+      document.body.appendChild(area);\
+      area.focus();\
+      area.select();\
+\
+      const copied = document.execCommand('copy');\
+\
+      if (copied) \{\
+        area.remove();\
+        show('\uc0\u51452 \u47928  \u45236 \u50857 \u51060  \u48373 \u49324 \u46104 \u50632 \u49845 \u45768 \u45796 .', false);\
+      \} else \{\
+        show('\uc0\u50500 \u47000  \u54364 \u49884 \u46108  \u51452 \u47928  \u45236 \u50857 \u51012  \u44600 \u44172  \u45580 \u47084  \u48373 \u49324 \u54644  \u51452 \u49464 \u50836 .', true);\
+      \}\
+    \}\
+  \}\
+\
+  [3, 5, 10].forEach((size) => \{\
+    const field = $('qty' + size);\
+\
+    field.addEventListener('input', () => \{\
+      if (field.value !== '') \{\
+        const number = Number(field.value);\
+        if (Number.isFinite(number) && number > 99) field.value = '99';\
+        if (Number.isFinite(number) && number < 0) field.value = '0';\
+      \}\
+      calculateTotal();\
+    \});\
+\
+    field.addEventListener('change', () => \{\
+      const value = field.value.trim();\
+      let number = value === '' ? 0 : Number(value);\
+\
+      if (!Number.isFinite(number)) number = 0;\
+      number = Math.max(0, Math.min(99, Math.floor(number)));\
+\
+      field.value = String(number);\
+      calculateTotal();\
+    \});\
+  \});\
+\
+  $('orderForm').addEventListener('submit', async (event) => \{\
+    event.preventDefault();\
+    if (!validate()) return;\
+\
+    const order = makeOrder();\
+    const text = orderText(order);\
+\
+    if (\
+      endpoint.startsWith('https://script.google.com/macros/s/') &&\
+      !endpoint.includes('https://script.google.com/macros/s/AKfycbwL04GINu_zAr26RdEnJs6YDQSTD9-uuLe4ZoWML8LNcnwe4LOBK8n5tqXuns7MMLbJJA/exec')\
+    ) \{\
+      try \{\
+        await fetch(endpoint, \{\
+          method: 'POST',\
+          mode: 'no-cors',\
+          headers: \{\
+            'Content-Type': 'text/plain;charset=utf-8'\
+          \},\
+          body: JSON.stringify(order)\
+        \});\
+\
+        show(\
+          '\uc0\u51452 \u47928  \u51204 \u49569 \u51012  \u49884 \u46020 \u54664 \u49845 \u45768 \u45796 . \u49892 \u51228  \u51200 \u51109  \u50668 \u48512 \u45716  Google \u49828 \u54532 \u47112 \u46300 \u49884 \u53944 \u50640 \u49436  \u54869 \u51064 \u54644  \u51452 \u49464 \u50836 .\\n\\n' +\
+          text,\
+          false\
+        );\
+      \} catch (error) \{\
+        show(\
+          '\uc0\u51452 \u47928  \u51204 \u49569 \u50640  \u49892 \u54056 \u54664 \u49845 \u45768 \u45796 . \u50500 \u47000  \u51452 \u47928  \u45236 \u50857 \u51012  \u48373 \u49324 \u54644  \u51204 \u45804 \u54644  \u51452 \u49464 \u50836 .\\n\\n' +\
+          text,\
+          true\
+        );\
+      \}\
+    \} else \{\
+      show(\
+        'Google \uc0\u49828 \u54532 \u47112 \u46300 \u49884 \u53944  \u50672 \u46041  URL\u51060  \u50500 \u51649  \u49444 \u51221 \u46104 \u51648  \u50506 \u50520 \u49845 \u45768 \u45796 . \u50500 \u47000  \u51452 \u47928  \u45236 \u50857 \u51012  \u48373 \u49324 \u54644  \u51204 \u45804 \u54644  \u51452 \u49464 \u50836 .\\n\\n' +\
+        text,\
+        true\
+      );\
+    \}\
+  \});\
+\
+  $('copyBtn').addEventListener('click', async () => \{\
+    if (!validate()) return;\
+    await copyText(orderText(makeOrder()));\
+  \});\
+\
+  calculateTotal();\
+\})();\
+</script>\
+</body>\
+</html>\
+}
